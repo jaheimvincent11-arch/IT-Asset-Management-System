@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Service Desk</title>
+
+    <link rel="stylesheet" href="internstyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+                <h1><i class="fa-solid fa-headset"></i> IT Service Desk</h1>
+                <p>Submit requests and report technical issues</p>
+            </div>
+
+
+            <div class="profile">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div class="user">
+                    <i class="fa-solid fa-user-circle"></i>
+                    Admin
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>How can we help you today?</p>
+
+        </section>
+
+
+
+
+        <!-- STAT CARDS -->
+
+
+        <section class="stats">
+
+
+            <div class="stat-card blue">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <div>
+                    <h2>12</h2>
+                    <p>Open Tickets</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card orange">
+
+                <i class="fa-solid fa-spinner"></i>
+
+                <div>
+                    <h2>5</h2>
+                    <p>In Progress</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card green">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+                    <h2>42</h2>
+                    <p>Resolved</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card purple">
+
+                <i class="fa-solid fa-laptop"></i>
+
+                <div>
+                    <h2>8</h2>
+                    <p>Asset Requests</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+        <div class="main-grid">
+
+
+
+            <!-- QUICK ACTIONS -->
+
+
+            <section class="card">
+
+
+                <h2>
+                    <i class="fa-solid fa-bolt"></i>
+                    Quick Actions
+                </h2>
+
+
+                <div class="actions">
+
+
+                    <div class="action-card">
+
+                        <i class="fa-solid fa-laptop"></i>
+
+                        <h3>Request Equipment</h3>
+
+                        <p>Laptop, monitor or accessories</p>
+
+                    </div>
+
+
+
+                    <div class="action-card">
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                        <h3>Network Issue</h3>
+
+                        <p>Internet or connectivity problems</p>
+
+                    </div>
+
+
+
+                    <div class="action-card">
+
+                        <i class="fa-solid fa-key"></i>
+
+                        <h3>Password Reset</h3>
+
+                        <p>Account access problems</p>
+
+                    </div>
+
+
+
+                    <div class="action-card">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        <h3>Software Install</h3>
+
+                        <p>Request applications</p>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+
+
+
+            <!-- RECENT REQUESTS -->
+
+
+            <section class="card">
+
+
+                <h2>
+                    <i class="fa-solid fa-clock"></i>
+                    Recent Requests
+                </h2>
+
+
+                <table>
+
+
+                    <tr>
+
+                        <th>Ticket</th>
+                        <th>Type</th>
+                        <th>Status</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>SR-1005</td>
+
+                        <td>Laptop Request</td>
+
+                        <td>
+                            <span class="status open">
+                                Open
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>SR-1004</td>
+
+                        <td>Password Reset</td>
+
+                        <td>
+                            <span class="status progress">
+                                In Progress
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>SR-1003</td>
+
+                        <td>Network Issue</td>
+
+                        <td>
+                            <span class="status done">
+                                Resolved
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                </table>
+
+
+
+            </section>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- REQUEST FORM -->
+
+
+        <section class="form-card">
+
+
+            <h2>
+                <i class="fa-solid fa-file-circle-plus"></i>
+                Create Service Request
+            </h2>
+
+
+
+            <form>
+
+
+                <div class="form-grid">
+
+
+                    <div>
+
+                        <label>Ticket Type</label>
+
+                        <select>
+
+                            <option>Asset Request</option>
+
+                            <option>Technical Support</option>
+
+                            <option>Password Reset</option>
+
+                            <option>Software Installation</option>
+
+                            <option>Network Issue</option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label>Priority</label>
+
+                        <select>
+
+                            <option>Low</option>
+
+                            <option>Medium</option>
+
+                            <option>High</option>
+
+                            <option>Critical</option>
+
+                        </select>
+
+
+                    </div>
+
+
+
+
+                    <div>
+
+                        <label>Full Name</label>
+
+                        <input type="text" placeholder="Enter name">
+
+
+                    </div>
+
+
+
+
+                    <div>
+
+                        <label>Department</label>
+
+                        <input type="text" placeholder="Department">
+
+
+                    </div>
+
+
+
+
+                    <div>
+
+                        <label>Email</label>
+
+                        <input type="email" placeholder="Email">
+
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label>Asset Type</label>
+
+                        <select>
+
+                            <option>Laptop</option>
+
+                            <option>Desktop</option>
+
+                            <option>Monitor</option>
+
+                            <option>Printer</option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <label>Description</label>
+
+                <textarea placeholder="Describe your issue..."></textarea>
+
+
+
+
+                <div class="upload">
+
+                    <i class="fa-solid fa-paperclip"></i>
+
+                    Attach screenshot or file
+
+                    <input type="file">
+
+
+                </div>
+
+
+
+
+                <button>
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Request
+
+                </button>
+
+
+
+            </form>
+
+
+        </section>
+
+
+
+
+
+
+
+        <!-- SUPPORT INFO -->
+
+
+        <div class="bottom-grid">
+
+
+
+            <div class="info-card">
+
+                <h3>
+                    <i class="fa-solid fa-phone"></i>
+                    Contact IT
+                </h3>
+
+
+                <p>Email: support@company.com</p>
+
+                <p>Phone: Ext 1234</p>
+
+                <p>Hours: Mon-Fri 8AM-5PM</p>
+
+
+            </div>
+
+
+
+
+            <div class="info-card">
+
+
+                <h3>
+                    <i class="fa-solid fa-circle-question"></i>
+                    FAQ
+                </h3>
+
+
+                <p>► Forgot password?</p>
+
+                <p>► Need a new device?</p>
+
+                <p>► Printer not working?</p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IT Asset Management System</title>
+
+    <link rel="stylesheet" href="internstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="login-page">
+    <div class="login-card">
+
+        <div class="login-header">
+            <i class="fas fa-laptop-code"></i>
+            <h2>IT Asset Management</h2>
+            <p>Login to continue</p>
+        </div>
+
+        <div class="input-group">
+         <i class="fas fa-user"></i>
+            <input
+                type="email"
+                id="username"
+                placeholder="Email"
+                autocomplete="email">
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                autocomplete="current-password">
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-user-tag"></i>
+            <select id="role">
+                <option value="admin">Admin</option>
+                <option value="staff">Staff</option>
+            </select>
+        </div>
+
+        <button class="login-button" onclick="login()">
+            Login
+        </button>
+
+        <p id="error"></p>
+
+        <div class="demo-users">
+            <h4>Supabase Profiles</h4>
+            <p>Please enter your the email and password for your profile.</p>
+        </div>
+
+        <a href="HomePage.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+</div>
+<script>
+    window.SUPABASE_URL = 'https://lftgnpogyyfprikkxqpp.supabase.co';
+    window.SUPABASE_ANON_KEY = 'sb_publishable_6GvqSKGhpfMPI3MJoj3mWg_GF0pllIf';
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="Login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Asset Management System</title>
+    <link rel="stylesheet" href="internstyle.css">
+    <script defer src="Login.js"></script>
+</head>
+<!-- VIDEO INTRO -->
+<div id="intro-screen">
+    <video autoplay muted playsinline id="intro-video">
+    <source src = "Office Infomation Management system Homepage .mp4" type="video/mp4">
+</div>
+<body>
+    <script>
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        const intro = document.getElementById("intro-screen");
+        intro.style.opacity = "0";
+        intro.style.transition = "1s ease";
+
+        setTimeout(() => {
+            intro.style.display = "none";
+        }, 1000);
+
+    }, 5000); // intro duration (5 seconds)
+});
+</script>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            IT Asset Management System
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+                <a href="LoginPage.html" class="login-btn">
+                    Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>Manage Your IT Assets Efficiently</h1>
+
+            <p>
+                Track laptops, desktops, printers,
+                routers, switches and all company
+                technology assets from one dashboard.
+            </p>
+
+            <a href="login.html">
+                <button class="primary-btn">
+                    Access Dashboard
+                </button>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="card">
+            <h2>500+</h2>
+            <p>Assets Tracked</p>
+        </div>
+
+        <div class="card">
+            <h2>50+</h2>
+            <p>Active Users</p>
+        </div>
+
+        <div class="card">
+            <h2>20+</h2>
+            <p>Categories</p>
+        </div>
+
+        <div class="card">
+            <h2>99%</h2>
+            <p>Inventory Accuracy</p>
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <h2>System Features</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>📦 Asset Tracking</h3>
+                <p>Track all IT equipment and assets.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>👥 User Roles</h3>
+                <p>Admin and Staff access control.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📊 Reports</h3>
+                <p>Generate inventory reports instantly.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔧 Maintenance</h3>
+                <p>Monitor repairs and service history.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌐 Network Devices</h3>
+                <p>Manage routers and switches.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔒 Secure Login</h3>
+                <p>Protected authentication system.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About The System</h2>
+
+        <p>
+            This IT Asset Management System helps organizations
+            manage hardware, networking devices, printers,
+            and other IT resources through a centralized dashboard.
+            The system improves inventory tracking, accountability,
+            and reporting.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h3>IT Asset Management System</h3>
+
+        <p>
+            Internship Project | Asset Tracking | Inventory Management
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+</html>

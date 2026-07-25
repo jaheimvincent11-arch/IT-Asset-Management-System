@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="internstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem("userRole") !== "staff") {
+            window.location.href = "LoginPage.html";
+        }
+    </script>
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <div>
+                <div class="brand">
+                    <i class="fas fa-laptop"></i>
+                    <div>
+                        <h2>ITAMS</h2>
+                        <p>Staff Portal</p>
+                    </div>
+                </div>
+
+                <nav>
+                    <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+
+                    <a href="Request.html"><i class="fas fa-paper-plane"></i> Requests</a>
+
+
+                    <a href="#"><i class="fas fa-headset"></i> Support</a>
+
+
+                    <a href="#"><i class="fas fa-user"></i> Profile</a>
+                </nav>
+            </div>
+
+            <div class="sidebar-user">
+                <img src="https://i.pravatar.cc/50" alt="User">
+                <div>
+                    <h4>Staff User</h4>
+                    <small>Employee</small>
+                </div>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+                <h1>Staff Dashboard</h1>
+                <button class="add-btn">New Request</button>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="icon blue">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h2>4</h2>
+                    <p>Assigned Assets</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon orange">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h2>2</h2>
+                    <p>Maintenance Requests</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon green">
+                        <i class="fas fa-ticket"></i>
+                    </div>
+                    <h2>3</h2>
+                    <p>Support Tickets</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon purple">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h2>5</h2>
+                    <p>Notifications</p>
+                </div>
+
+            </div>
+
+            <div class="table-card">
+                <h2>My Assigned Assets</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Asset ID</th>
+                            <th>Device</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>IT001</td>
+                            <td>Dell Latitude Laptop</td>
+                            <td><span class="badge success">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>IT002</td>
+                            <td>HP Monitor</td>
+                            <td><span class="badge success">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>IT003</td>
+                            <td>Logitech Keyboard</td>
+                            <td><span class="badge success">Active</span></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </main>
+
+    </div>
+    <input type="text" id="assetSearch" placeholder="Search Assets...">
+
+</body>
+
+</html>

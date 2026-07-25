@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | IT Asset Management</title>
+
+    <link rel="stylesheet" href="internstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="page-header">
+            <h1><i class="fa-solid fa-headset"></i> IT Support Center</h1>
+            <p>Need help? Submit a support request and our IT team will assist you.</p>
+        </header>
+
+        <div class="support-grid">
+
+            <!-- Support Form -->
+            <div class="support-card">
+
+                <h2>Create Support Ticket</h2>
+
+                <form id="supportForm">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="John Smith" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="john@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Department</label>
+                        <input type="text" id="department" placeholder="Finance">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Issue Category</label>
+                        <select id="category">
+                            <option>Hardware</option>
+                            <option>Software</option>
+                            <option>Network</option>
+                            <option>Printer</option>
+                            <option>Asset Request</option>
+                            <option>Password Reset</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select id="priority">
+                            <option>Low</option>
+                            <option>Medium</option>
+                            <option>High</option>
+                            <option>Critical</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Issue Description</label>
+                        <textarea id="description" rows="6" placeholder="Describe your issue..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Submit Ticket
+                    </button>
+
+                </form>
+
+                <div id="successMessage"></div>
+
+            </div>
+
+            <!-- Sidebar -->
+
+            <div class="support-sidebar">
+
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-phone"></i> Contact IT</h3>
+
+                    <p><strong>Phone:</strong> Ext. 1234</p>
+                    <p><strong>Email:</strong> itsupport@company.com</p>
+                    <p><strong>Hours:</strong> Mon - Fri</p>
+                    <p>8:00 AM - 5:00 PM</p>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h3>
+
+                    <p><strong>Forgot Password?</strong></p>
+                    <small>Submit a Password Reset ticket.</small>
+
+                    <hr>
+
+                    <p><strong>Need a Laptop?</strong></p>
+                    <small>Use the Asset Request option.</small>
+
+                    <hr>
+
+                    <p><strong>Computer Slow?</strong></p>
+                    <small>Restart your computer before submitting a ticket.</small>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h3><i class="fa-solid fa-bolt"></i> Quick Help</h3>
+
+                    <button class="quick-btn">
+                        <i class="fa-solid fa-key"></i>
+                        Password Reset
+                    </button>
+
+                    <button class="quick-btn">
+                        <i class="fa-solid fa-laptop"></i>
+                        Request Device
+                    </button>
+
+                    <button class="quick-btn">
+                        <i class="fa-solid fa-network-wired"></i>
+                        Network Issue
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="support.js"></script>
+
+</body>
+
+</html>

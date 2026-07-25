@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Asset Dashboard</title>
+    <script defer src="Dashboard.js"></script>
+    <script>
+        if (localStorage.getItem("userRole") !== "admin") {
+            window.location.href = "LoginPage.html";
+        }
+    </script>
+
+    <link rel="stylesheet" href="internstyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <i class="fas fa-shield-halved"></i>
+                <div>
+                    <h2>IT Asset</h2>
+                    <p>Management System</p>
+                </div>
+            </div>
+
+            <nav>
+
+                <a href="#" class="active">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+
+
+                <a href="Assets.html">
+                    <i class="fas fa-box"></i>
+                    Assets
+                </a>
+
+                <a href="Categories.html">
+                    <i class="fas fa-layer-group"></i>
+                    Categories
+                </a>
+
+                <a href="User.html">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+
+                <a href="Report.html">
+                    Reports
+                </a>
+
+                <a href="Maintence.html">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                    Maintenance
+                </a>
+
+            </nav>
+
+            <div class="sidebar-user">
+
+                <img src="https://via.placeholder.com/50">
+
+                <div>
+                    <strong>Admin User</strong>
+                    <p>Administrator</p>
+                </div>
+                <button onclick="logout()">Logout</button>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search assets...">
+                </div>
+
+                <div class="top-actions">
+
+                    <i class="fas fa-bell"></i>
+
+                    <button class="add-btn">
+                        + Add Asset
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- PAGE TITLE -->
+
+            <section class="page-title">
+
+                <h1>Dashboard 👋</h1>
+
+                <p>
+                    Welcome back. Here's what's happening
+                    with your inventory.
+                </p>
+
+            </section>
+
+            <!-- KPI CARDS -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="icon blue">
+                        <i class="fas fa-cube"></i>
+                    </div>
+
+                    <div>
+                        <h3>Total Assets</h3>
+                        <h2 id="totalAssets">0</h2>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="icon green">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+
+                    <div>
+                        <h3>Available Stock</h3>
+                        <h2 id="availableStock">0</h2>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="icon orange">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div>
+                        <h3>Low Stock</h3>
+                        <h2 id="lowStock">0</h2>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="icon purple">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+
+                    <div>
+                        <h3>Categories</h3>
+                        <h2 id="totalCategories">0</h2>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- FILTERS -->
+
+            <section class="filters">
+
+                <input type="text" placeholder="Search assets">
+
+                <select>
+                    <option>All Categories</option>
+                </select>
+
+                <select>
+                    <option>All Status</option>
+                </select>
+
+            </section>
+            <div class="table-card">
+
+                <h2>Add Asset</h2>
+
+                <input type="text" id="assetName" placeholder="Asset Name">
+
+                <input type="text" id="assetCategory" placeholder="Category">
+
+                <input type="number" id="assetQuantity" placeholder="Quantity">
+
+                <button id="saveBtn" onclick="addAsset()">
+
+                    Add Asset
+
+                </button>
+
+            </div>
+            <!-- TABLE -->
+
+            <section class="table-card">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Asset</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Dell Latitude 5420</td>
+
+                            <td>Laptops</td>
+
+                            <td>
+                                <span class="badge success">
+                                    In Stock
+                                </span>
+                            </td>
+
+                            <td>24</td>
+
+                            <td>
+
+                                <button>View</button>
+
+                                <button>Edit</button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

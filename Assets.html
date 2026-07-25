@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets - IT Asset Management System</title>
+
+    <link rel="stylesheet" href="internstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+   
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>Asset Management</h1>
+        </div>
+        <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">
+        <i class="fas fa-laptop-code"></i>
+        <span>IT Asset Manager</span>
+    </div>
+
+    <ul class="nav-links">
+        <li>
+            <a href="assets.html" class="active">
+                <i class="fas fa-boxes"></i>
+                <span>Assets</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="categories.html">
+                <i class="fas fa-layer-group"></i>
+                <span>Categories</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="User.html">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Report.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Maintence.html">
+                <i class="fas fa-tools"></i>
+                <span>Maintenance</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="profile">
+        <img src="https://via.placeholder.com/40" alt="Profile">
+    </div>
+</nav>
+
+       <!-- Modern Asset Form -->
+<div class="card modern-form-card">
+
+    <div class="card-header">
+        <div>
+            <h2><i class="fa-solid fa-laptop"></i> Asset Details</h2>
+            <p>Add a new IT asset or update an existing one.</p>
+        </div>
+    </div>
+
+    <form id="assetForm">
+
+        <input type="hidden" id="assetId">
+
+        <!-- Basic Information -->
+        <div class="form-section">
+
+            <h3><i class="fa-solid fa-circle-info"></i> Basic Information</h3>
+
+            <div class="modern-grid">
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-tag"></i> Asset Name *</label>
+                    <input type="text" id="assetName" placeholder="Dell Latitude 7440" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-layer-group"></i> Category *</label>
+                    <select id="categoryId" required>
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-building"></i> Brand *</label>
+                    <input type="text" id="brand" placeholder="Dell" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-desktop"></i> Model *</label>
+                    <input type="text" id="model" placeholder="Latitude 7440" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-barcode"></i> Serial Number *</label>
+                    <input type="text" id="serialNumber" placeholder="ABC123456" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-qrcode"></i> Asset Tag *</label>
+                    <input type="text" id="assetTag" placeholder="AST-0001" required>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Purchase Information -->
+        <div class="form-section">
+
+            <h3><i class="fa-solid fa-cart-shopping"></i> Purchase Information</h3>
+
+            <div class="modern-grid">
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-calendar"></i> Purchase Date</label>
+                    <input type="date" id="purchaseDate">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-dollar-sign"></i> Purchase Cost</label>
+                    <input type="number" id="purchaseCost" step="0.01" placeholder="0.00">
+                </div>
+
+                <div class="input-group full">
+                    <label><i class="fa-solid fa-truck"></i> Supplier</label>
+                    <input type="text" id="supplier" placeholder="Supplier Name">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Assignment -->
+        <div class="form-section">
+
+            <h3><i class="fa-solid fa-user-check"></i> Assignment</h3>
+
+            <div class="modern-grid">
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-location-dot"></i> Location *</label>
+                    <input type="text" id="location" placeholder="Head Office" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-user"></i> Assigned To</label>
+                    <select id="assignedTo">
+                        <option value="">Select Employee</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-circle-check"></i> Status *</label>
+                    <select id="status" required>
+                        <option value="Available">Available</option>
+                        <option value="Assigned">Assigned</option>
+                        <option value="Under Maintenance">Under Maintenance</option>
+                        <option value="Retired">Retired</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-star"></i> Condition *</label>
+                    <select id="condition" required>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Warranty -->
+        <div class="form-section">
+
+            <h3><i class="fa-solid fa-shield-halved"></i> Warranty & Notes</h3>
+
+            <div class="modern-grid">
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-calendar-days"></i> Warranty Expiry</label>
+                    <input type="date" id="warrantyExpiry">
+                </div>
+
+                <div class="input-group full">
+                    <label><i class="fa-solid fa-note-sticky"></i> Notes</label>
+                    <textarea id="notes" rows="5" placeholder="Additional information about this asset..."></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-footer">
+
+            <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Save Asset
+            </button>
+
+            <button type="button" id="clearBtn" class="btn-secondary">
+                <i class="fa-solid fa-rotate-left"></i>
+                Clear Form
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+        <!-- Search -->
+        <div class="card">
+            <h2>Search Assets</h2>
+
+            <div class="search-grid">
+
+                <input type="text" id="searchInput" placeholder="Search by asset name, tag, or serial number">
+
+                <select id="statusFilter">
+                    <option value="">All Status</option>
+                    <option value="Available">Available</option>
+                    <option value="Assigned">Assigned</option>
+                    <option value="Under Maintenance">Under Maintenance</option>
+                    <option value="Retired">Retired</option>
+                </select>
+
+                <button id="searchBtn" class="btn-primary">
+                    <i class="fa fa-search"></i> Search
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Assets Table -->
+        <div class="card">
+            <div class="table-header">
+                <h2>All Assets</h2>
+                <span id="assetCount">0 assets</span>
+            </div>
+
+            <div class="table-container">
+                <table class="asset-table">
+                    <thead>
+                        <tr>
+                            <th>Asset Tag</th>
+                            <th>Asset Name</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Assigned To</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="assetTableBody">
+                        <tr>
+                            <td colspan="8" class="loading">Loading assets...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="assets.js"></script>
+<script>
+  window.SUPABASE_URL = 'https://lftgnpogyyfprikkxqpp.supabase.co';
+  window.SUPABASE_ANON_KEY = 'sb_publishable_6GvqSKGhpfMPI3MJoj3mWg_GF0pllIf';
+</script>
+
+</body>
+</html>
